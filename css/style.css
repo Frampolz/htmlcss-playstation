@@ -8,6 +8,25 @@ body {
 }
 
 .header-logo img {
-    width: 12%;
+    width: 6em;
     
+}
+
+.list-img img {
+    width: 5em;
+}
+
+.btn-wide {
+    padding: 0.5em 25%;
+    border-radius: 5em;
+}
+
+.search-row {
+    padding: 0.5em 0;
+    border: 1px solid black;
+    
+}
+
+.search-row img {
+    width: 1.8em;
 }
