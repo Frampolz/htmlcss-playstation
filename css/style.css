@@ -45,14 +45,22 @@ body {
 }
 
 /* jumbotron */
-/* .jumbotron {
-    background-image: url(../img/returnal-listing-thumb-01-ps5.jpg);
+.jumbotron {
+    background-image: url(../img/jumbo-bg.png);
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
     height: 550px;
-    
 }
 
-.jumbo-row {
-} */
+.jumbo-row h2 {
+    font-size: 2.7em;
+}
+
+.jumbo-row h2,
+.jumbo-row p {
+    color: white;
+} 
+
+.jumbo-col img {
+    width: 58%;
+}
