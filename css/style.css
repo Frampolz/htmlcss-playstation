@@ -21,6 +21,19 @@ body {
     border-radius: 5em;
 }
 
+.btn-small {
+    border-radius: 5em;
+}
+
+.right-list {
+    background-color: white;
+    color: grey;
+}
+
+.search img {
+    width: 1.8em
+}
+
 .search-row {
     padding: 0.5em 0;
     border: 1px solid black;
@@ -30,3 +43,16 @@ body {
 .search-row img {
     width: 1.8em;
 }
+
+/* jumbotron */
+/* .jumbotron {
+    background-image: url(../img/returnal-listing-thumb-01-ps5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 550px;
+    
+}
+
+.jumbo-row {
+} */
