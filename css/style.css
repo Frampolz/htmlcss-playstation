@@ -74,13 +74,40 @@ body {
     width: 58%;
 }
 
-.card-thumbs {
-    width: 200px;
-    height: 100px;
-
-}
-
 .card-thumbs img {
     width: 100%;
     border-radius: 15px;
+}
+
+/* playstation 5 */
+.section-title {
+    font-size: 2.5em;
+}
+
+section h6 {
+    color: #157dd2;
+}
+
+section p {
+    color: #727272;
+    font-size: 1.3em;
+}
+
+.ps5-slider img {
+    width: 95%;
+}
+
+.ps5-thumbs img {
+    width: 50%;
+}
+
+@media screen and (max-width:768px) {
+.ps5-thumbs img {
+    width: 90%;
+}  
+}
+
+.ps5-thumbs,
+.hardware-title {
+    text-align: center;
 }
