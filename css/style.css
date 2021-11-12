@@ -42,11 +42,6 @@ body {
     
 }
 
-.search-row>input {
-    
-    
-}
-
 .search-row img {
     
     z-index: 1;
@@ -110,4 +105,18 @@ section p {
 .ps5-thumbs,
 .hardware-title {
     text-align: center;
+}
+/* /playstation 5 */
+
+/* it takes tow */
+.takes-two {
+    background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+/* /it takes tow */
+
+.new-games {
+    background-color: #1f1f1f;
 }
