@@ -1,8 +1,15 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 /* header */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
 .header-top h4 {
     color: white;
 }
@@ -31,17 +38,19 @@ body {
 }
 
 .search img {
-    width: 1.8em
+    width: 1.8em;
+    
 }
 
-.search-row {
-    padding: 0.5em 0;
-    border: 1px solid black;
+.search-row>input {
+    
     
 }
 
 .search-row img {
-    width: 1.8em;
+    
+    z-index: 1;
+    width: 2.3em;
 }
 
 /* jumbotron */
@@ -63,4 +72,15 @@ body {
 
 .jumbo-col img {
     width: 58%;
+}
+
+.card-thumbs {
+    width: 200px;
+    height: 100px;
+
+}
+
+.card-thumbs img {
+    width: 100%;
+    border-radius: 15px;
 }
