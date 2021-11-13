@@ -8,6 +8,7 @@ body {
     position: sticky;
     top: 0;
     background-color: white;
+    z-index: 5;
 }
 
 .header-top h4 {
@@ -39,11 +40,9 @@ body {
 
 .search img {
     width: 1.8em;
-    
 }
 
 .search-row img {
-    
     z-index: 1;
     width: 2.3em;
 }
@@ -83,7 +82,9 @@ section h6 {
     color: #157dd2;
 }
 
-section p {
+.ps4-section p,
+.ps-store-section p,
+.ps5-section p {
     color: #727272;
     font-size: 1.3em;
 }
@@ -145,6 +146,7 @@ section p {
     height: 350px;
     position: relative;
 }
+
 .ps-plus-banner img {
     height: 100%;
     position: absolute;
@@ -155,3 +157,44 @@ section p {
 .btn-ps-plus {
     background-color: rgba(255, 255, 255, 0.5);
 }
+/* /ps plus */
+
+/* ps-store */
+.ps-store-thumbs img {
+    width: 80%;
+}
+/* /ps-store */
+
+/* ps now */
+.ps-now-section {
+    background-color: #161c3b;
+}
+
+.ps-now-section p {
+   font-size: 1.1em;
+}
+/* /ps now */
+
+/* social */
+.social-thumbs img {
+    width: 80%;
+}
+/* /social */
+
+/* footer */
+.footer {
+    background-color: #00439c;
+}
+
+.footer-logo img {
+    width: 6em;
+}
+
+.language-logo img {
+    width: 1.3em;
+}
+
+.sie-logo img {
+    width: 8em;
+}
+/* /footer */
