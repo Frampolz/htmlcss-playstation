@@ -15,13 +15,8 @@ body {
     z-index: 5;
 }
 
-.header-top h4 {
-    color: white;
-}
-
 .header-logo img {
-    width: 6em;
-    
+    width: 6em; 
 }
 
 .list-img img {
@@ -30,11 +25,6 @@ body {
 
 .btn-wide {
     padding: 0.5em 25%;
-    border-radius: 5em;
-}
-
-.btn-small {
-    border-radius: 5em;
 }
 
 .right-list {
@@ -55,6 +45,42 @@ body {
     text-decoration: none;
 }
 
+.sub-menu li {
+    list-style: square;
+}
+
+.my_nav_sub_link {
+    display: block;
+    padding: .5rem 0;
+    color: black;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.my_nav_sub_link:hover {
+    color: var(--border-color);
+    background-color: white;
+    
+}
+
+.inner-border-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2.1rem;
+    display: none;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: none;
+}
+
+.nav-button:hover .inner-border-menu {
+    display: block;
+}
+
 .search img {
     width: 1.8em;
 }
@@ -64,6 +90,7 @@ body {
     width: 2.3em;
 }
 
+/* main */
 /* jumbotron */
 .jumbotron {
     background-image: url(../img/jumbo-bg.png);
@@ -85,12 +112,13 @@ body {
     width: 58%;
 }
 
-.card-thumbs {
+.jumbo-bot .card-thumbs {
     transform: translateY(15px);
     transition: transform 0.5s;
 }
 .card-thumbs:hover {
     transform: translateY(0);
+    cursor: pointer;
 }
 
 .card-thumbs.border_ {
@@ -160,6 +188,19 @@ section h6 {
     background-position: center;
     height: 600px;
 }
+
+.inner-border-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.96rem 3.6rem;    
+    display: none;
+}
+
+.main-btn:hover .inner-border-main {
+    display: block;
+}
 /* /it takes tow */
 
 /* new games */
@@ -171,6 +212,19 @@ section h6 {
 /* playstation 4 */
 .reg {
     vertical-align: super;
+}
+
+.ps4-btn:hover .inner-border-ps4 {
+    display: block;
+}
+
+.inner-border-ps4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.95rem 3.3rem;    
+    display: none;
 }
 /* /playstation 4 */
 
@@ -222,6 +276,19 @@ section h6 {
     top: 0;
     right: 1em;
 }
+
+.ps-now-btn:hover .inner-border-now {
+    display: block;
+}
+
+.inner-border-now {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.95rem 6rem;    
+    display: none;
+}
 /* /ps now */
 
 /* social */
@@ -232,6 +299,7 @@ section h6 {
     width: 80%;
 }
 /* /social */
+/* /main */
 
 /* footer */
 .footer {
