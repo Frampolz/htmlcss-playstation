@@ -2,6 +2,11 @@
 --border-color: #0072ce;
 }
 
+/* utility */
+.w-102 {
+    width: 102%;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
@@ -23,13 +28,36 @@ body {
     width: 5em;
 }
 
-.btn-wide {
+.nav-btn {
     padding: 0.5em 25%;
+}
+
+.inner-border-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2.1rem;
+    display: none;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: none;
+}
+
+.nav-button:hover .inner-border-menu {
+    display: block;
 }
 
 .right-list {
     background-color: white;
     color: grey;
+}
+
+#my_dropdown {
+    top: 97%;
+    left: -12px;
 }
 
 .my_nav_link {
@@ -38,6 +66,23 @@ body {
     color: grey;
     text-decoration: none;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.dropdown-arrow::after {
+    display: inline-block;
+    margin-left: .255em;
+    content: "\f078";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    border-top: .3em solid transparent;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+.nav-item:active .dropdown-arrow::after,
+.nav-item:focus .dropdown-arrow::after {
+    rotate: 180deg;
 }
 
 .my_nav_link:hover {
@@ -63,26 +108,9 @@ body {
     
 }
 
-.inner-border-menu {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem 2.1rem;
-    display: none;
-}
-
-.nav-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: none;
-}
-
-.nav-button:hover .inner-border-menu {
-    display: block;
-}
-
 .search img {
-    width: 1.8em;
+    width: 1.7em;
+    cursor: pointer;
 }
 
 .search-row img {
@@ -148,13 +176,27 @@ section h6 {
     font-size: 1.3em;
 }
 
+.ps5-btn:hover .inner-border-ps5 {
+    display: block;
+}
+
+.inner-border-ps5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 5.37rem;
+    display: none;
+}
+
 .ps5-slider img {
     width: 95%;
 }
 
 .ps5-thumbs img {
     width: 50%;
-    filter: opacity(0.7);
+    filter: opacity(0.6);
+    transition: 0.5s;
 }
 
 .ps5-thumbs:hover img, 
@@ -172,7 +214,6 @@ section h6 {
 .ps4-thumbs img {
     width: 90%;
 } 
-
 }
 
 .ps5-thumbs,
