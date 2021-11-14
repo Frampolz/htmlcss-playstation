@@ -1,5 +1,5 @@
 :root {
-
+--border-color: #0072ce;
 }
 
 body {
@@ -72,6 +72,12 @@ body {
     width: 58%;
 }
 
+.card-thumbs.border_ {
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 0.1em;
+}
+
 .card-thumbs img {
     width: 100%;
     border-radius: 15px;
@@ -83,7 +89,7 @@ body {
 }
 
 section h6 {
-    color: #157dd2;
+    color: var(--border-color);
 }
 
 .ps4-section p,
@@ -99,6 +105,14 @@ section h6 {
 
 .ps5-thumbs img {
     width: 50%;
+    filter: opacity(0.7);
+}
+
+.ps5-thumbs:hover img, 
+.ps5-thumbs:active img, 
+.ps5-thumbs:focus img {
+    filter: opacity(1);
+    cursor: pointer;
 }
 
 @media screen and (max-width:768px) {
