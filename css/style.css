@@ -85,6 +85,11 @@ body {
     rotate: 180deg;
 }
 
+.my-ps-menu:active .dropdown-arrow::after,
+.my-ps-menu:focus .dropdown-arrow::after {
+    rotate: 180deg;
+}
+
 .my_nav_link:hover {
     color: var(--border-color);
     text-decoration: none;
@@ -191,6 +196,12 @@ section h6 {
 
 .ps5-slider img {
     width: 95%;
+}
+
+.ps5-thumbs-border:hover,
+.ps5-thumbs-border:active,
+.ps5-thumbs-border:focus {
+    border-bottom: 3px solid var(--border-color) ;
 }
 
 .ps5-thumbs img {
