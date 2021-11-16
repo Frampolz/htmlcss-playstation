@@ -1,12 +1,23 @@
 :root {
 --border-color: #0072ce;
+--ps-plus-bc: #bebcbb;
+--ps-now-bc: #161c3b;
+--footer-bc: #00439c;
 }
 
 /* utility */
 .w-102 {
     width: 102%;
 }
-
+/* common */
+.inner-border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+/* /common */
 body {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
@@ -16,7 +27,6 @@ body {
 .header {
     position: sticky;
     top: 0;
-    background-color: white;
     z-index: 5;
 }
 
@@ -33,12 +43,7 @@ body {
 }
 
 .inner-border-menu {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 1rem 2.1rem;
-    display: none;
 }
 
 .nav-button:hover {
@@ -46,13 +51,13 @@ body {
     transition: none;
 }
 
-.nav-button:hover .inner-border-menu {
+.nav-button:hover .inner-border-menu,
+.ps5-btn:hover .inner-border-ps5,
+.main-btn:hover .inner-border-main,
+.ps4-btn:hover .inner-border-ps4,   
+.btn-ps-plus:hover .inner-border-plus,
+.ps-now-btn:hover .inner-border-now {
     display: block;
-}
-
-.right-list {
-    background-color: white;
-    color: grey;
 }
 
 #my_dropdown {
@@ -68,6 +73,11 @@ body {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
+.my_nav_link:hover {
+    color: var(--border-color);
+    text-decoration: none;
+}
+
 .dropdown-arrow::after {
     display: inline-block;
     margin-left: .255em;
@@ -80,23 +90,27 @@ body {
     border-left: .3em solid transparent;
 }
 
+.my-ps-menu:active .dropdown-arrow::after,
+.my-ps-menu:focus .dropdown-arrow::after,
 .nav-item:active .dropdown-arrow::after,
 .nav-item:focus .dropdown-arrow::after {
     rotate: 180deg;
 }
 
-.my-ps-menu:active .dropdown-arrow::after,
-.my-ps-menu:focus .dropdown-arrow::after {
-    rotate: 180deg;
-}
 
-.my_nav_link:hover {
+.my_nav_sub_link::before {
+    content: "\f111";
+    display: inline-block;
+    font-family: 'Font Awesome 6 Free';
+    font-size: 0.4em;
+    font-weight: 900;
+    margin-right: .655em;
+    vertical-align: middle;
+    border-top: .3em solid transparent;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
     color: var(--border-color);
-    text-decoration: none;
-}
-
-.sub-menu li {
-    list-style: square;
 }
 
 .my_nav_sub_link {
@@ -136,11 +150,6 @@ body {
     font-size: 2.7em;
 }
 
-.jumbo-row h2,
-.jumbo-row p {
-    color: white;
-} 
-
 .jumbo-col img {
     width: 58%;
 }
@@ -149,7 +158,7 @@ body {
     transform: translateY(15px);
     transition: transform 0.5s;
 }
-.card-thumbs:hover {
+.jumbo-bot .card-thumbs:hover {
     transform: translateY(0);
     cursor: pointer;
 }
@@ -181,27 +190,12 @@ section h6 {
     font-size: 1.3em;
 }
 
-.ps5-btn:hover .inner-border-ps5 {
-    display: block;
-}
-
 .inner-border-ps5 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem 5.37rem;
-    display: none;
+    padding: 0.95rem 5.37rem;
 }
 
 .ps5-slider img {
     width: 95%;
-}
-
-.ps5-thumbs-border:hover,
-.ps5-thumbs-border:active,
-.ps5-thumbs-border:focus {
-    border-bottom: 3px solid var(--border-color) ;
 }
 
 .ps5-thumbs img {
@@ -217,8 +211,14 @@ section h6 {
     cursor: pointer;
 }
 
+.ps5-thumbs-border:hover,
+.ps5-thumbs-border:active,
+.ps5-thumbs-border:focus {
+    border-bottom: 3px solid var(--border-color) ;
+}
+
 @media screen and (max-width:768px) {
-.ps5-thumbs img {
+    .ps5-thumbs img {
     width: 90%;
 } 
  
@@ -227,10 +227,6 @@ section h6 {
 } 
 }
 
-.ps5-thumbs,
-.hardware-title {
-    text-align: center;
-}
 /* /playstation 5 */
 
 /* it takes tow */
@@ -242,22 +238,19 @@ section h6 {
 }
 
 .inner-border-main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 0.96rem 3.6rem;    
-    display: none;
+
 }
 
-.main-btn:hover .inner-border-main {
-    display: block;
-}
 /* /it takes tow */
 
 /* new games */
 .new-games-section {
     background-color: #1f1f1f;
+}
+
+.new-games-section .card-thumbs {
+    cursor: pointer;
 }
 /* /new games */
 
@@ -266,23 +259,14 @@ section h6 {
     vertical-align: super;
 }
 
-.ps4-btn:hover .inner-border-ps4 {
-    display: block;
-}
-
 .inner-border-ps4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 0.95rem 3.3rem;    
-    display: none;
 }
 /* /playstation 4 */
 
 /* ps plus */
 .ps-plus-section {
-    background-color: #bebcbb;
+    background-color: var(--ps-plus-bc);
 }
 
 /* /ps plus */
@@ -301,6 +285,11 @@ section h6 {
 .btn-ps-plus {
     background-color: rgba(255, 255, 255, 0.5);
 }
+
+.inner-border-plus{
+    padding: 0.95rem 6.3rem;    
+}
+
 /* /ps plus */
 
 /* ps-store */
@@ -311,7 +300,7 @@ section h6 {
 
 /* ps now */
 .ps-now-section {
-    background-color: #161c3b;
+    background-color: var(--ps-now-bc);
 }
 
 .ps-now-section p {
@@ -323,23 +312,13 @@ section h6 {
     position: relative;
 }
 .ps-now-banner img {
-    height: 100%;
     position: absolute;
     top: 0;
     right: 1em;
 }
 
-.ps-now-btn:hover .inner-border-now {
-    display: block;
-}
-
 .inner-border-now {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 0.95rem 6rem;    
-    display: none;
 }
 /* /ps now */
 
@@ -355,7 +334,7 @@ section h6 {
 
 /* footer */
 .footer {
-    background-color: #00439c;
+    background-color: var(--footer-bc);
 }
 
 .footer-logo img {
